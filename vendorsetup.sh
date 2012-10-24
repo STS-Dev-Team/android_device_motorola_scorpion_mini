@@ -1,2 +1,2 @@
-add_lunch_combo cm_scorpion_mini-eng
-
+add_lunch_combo cm_scorpion_mini-userdebug
+add_lunch_combo full_scorpion_mini-eng
