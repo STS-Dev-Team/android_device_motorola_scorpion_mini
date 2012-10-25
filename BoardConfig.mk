@@ -5,4 +5,4 @@
 -include vendor/motorola/scorpion_mini/BoardConfigVendor.mk
 
 # Kernel
-TARGET_PREBUILT_KERNEL := device/motorola/scorpion_mini/kernel
+#TARGET_PREBUILT_KERNEL := device/motorola/scorpion_mini/kernel
