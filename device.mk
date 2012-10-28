@@ -2,7 +2,7 @@
 $(call inherit-product-if-exists, vendor/motorola/scorpion_mini/scorpion_mini-vendor.mk)
 
 ## overlays
-DEVICE_PACKAGE_OVERLAYS += device/vendor/motorola/scorpion_mini/overlay
+DEVICE_PACKAGE_OVERLAYS += device/vendor/motorola/scorpion_mini/overlay/aosp
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi

@@ -4,7 +4,7 @@ $(call inherit-product, device/motorola/scorpion_mini/full_scorpion_mini.mk)
 # Inherit common product files.
 $(call inherit-product, vendor/aokp/configs/common_phone.mk)
 
-#DEVICE_PACKAGE_OVERLAYS += device/motorola/scorpion_mini/overlay/aokp
+DEVICE_PACKAGE_OVERLAYS += device/motorola/scorpion_mini/overlay/aokp
 
 # Setup device specific product configuration.
 PRODUCT_NAME := aokp_scorpion_mini
