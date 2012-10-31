@@ -11,54 +11,8 @@ persist.rild.nitz_short_ons_0=
 persist.rild.nitz_short_ons_1=
 persist.rild.nitz_short_ons_2=
 persist.rild.nitz_short_ons_3=
-DEVICE_PROVISIONED=1
-debug.sf.hw=1
-debug.egl.hw=1
-debug.composition.type=dyn
 debug.enable.wl_log=1
-debug.mdpcomp.maxlayer=3
-debug.mdpcomp.logs=0
 debug.sf.no_hw_vsync=1
-debug.enabletr=0
-
-#system props for the MM modules
-
-media.stagefright.enable-player=true
-media.stagefright.enable-http=true
-media.stagefright.enable-aac=true
-media.stagefright.enable-qcp=true
-media.stagefright.enable-fma2dp=true
-media.stagefright.enable-scan=true
-mmp.enable.3g2=true
-
-# System prop to select audio resampler quality
-af.resampler.quality=255
-# System prop to select MPQAudioPlayer by default on mpq8064
-mpq.audio.decode=true
-
-#
-# system property for Bluetooth Handsfree Profile version
-#
-ro.bluetooth.hfp.ver=1.6
-#
-#system prop for Bluetooth hci transport
-ro.qualcomm.bt.hci_transport=smd
-#
-# system prop for requesting Master role in incoming Bluetooth connection.
-#
-ro.bluetooth.request.master=true
-#
-# system prop for Bluetooth Auto connect for remote initated connections
-#
-ro.bluetooth.remote.autoconnect=true
-# system property for Bluetooth discoverability time out in seconds
-# 0: Always discoverable
-#debug.bt.discoverable_time=0
-
-#
-# System prop for sending transmit power request to RIL during WiFi hotspot on/off
-#
-ro.ril.transmitpower=true
 
 #
 #Simulate sdcard on /data/media
@@ -69,10 +23,6 @@ persist.fuse_sdcard=true
 # Supports warmboot capabilities
 #
 ro.warmboot.capability=1
-
-# Turn off SSR until we can learn more
-#snapdragon value add features
-ro.qc.sdk.audio.ssr=false
 
 #
 # Gps Smart Battery Savings (depends on sensor hub)
@@ -128,7 +78,6 @@ ro.sf.lcd_density=240
 telephony.lteOnCdmaDevice=1
 ro.telephony.default_network=10
 ro.modem.no_wdog_chk=1
-keyguard.no_require_sim=true
 ro.media.enc.aud.fileformat=qcp
 ro.media.enc.aud.codec=qcelp
 ro.media.enc.aud.bps=13300
