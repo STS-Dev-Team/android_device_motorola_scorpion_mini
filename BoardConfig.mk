@@ -6,3 +6,6 @@
 
 # Kernel
 #TARGET_PREBUILT_KERNEL := device/motorola/scorpion_mini/kernel
+
+#Twrp
+DEVICE_RESOLUTION := 540x960
