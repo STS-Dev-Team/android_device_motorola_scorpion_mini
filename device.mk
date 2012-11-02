@@ -2,11 +2,14 @@
 $(call inherit-product-if-exists, vendor/motorola/scorpion_mini/scorpion_mini-vendor.mk)
 
 ## overlays
-DEVICE_PACKAGE_OVERLAYS += device/vendor/motorola/scorpion_mini/overlay/aosp
+DEVICE_PACKAGE_OVERLAYS += device/motorola/scorpion_mini/overlay/aosp
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
+
+# IDC
+PRODUCT_COPY_FILES += device/motorola/scorpion_mini/idc/atmxt-i2c.idc:system/usr/idc/atmxt-i2c.idc
 
 # copy all kernel modules under the "modules" directory to system/lib/modules
 #PRODUCT_COPY_FILES += $(shell \
