@@ -17,6 +17,12 @@ PRODUCT_COPY_FILES += $(DEVICE_FOLDER)/idc/atmxt-i2c.idc:system/usr/idc/atmxt-i2
 PRODUCT_COPY_FILES += \
     $(DEVICE_FOLDER)/audio/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x
 
+# Radio and Telephony
+PRODUCT_PROPERTY_OVERRIDES += \
+    DEVICE_PROVISIONED=1 \
+    ro.cdma.subscribe_on_ruim_ready=true \
+    persist.radio.no_wait_for_card=1
+
 # copy all kernel modules under the "modules" directory to system/lib/modules
 #PRODUCT_COPY_FILES += $(shell \
 #    find device/motorola/scorpion_mini/modules -name '*.ko' \
