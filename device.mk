@@ -1,3 +1,5 @@
+DEVICE_FOLDER := device/motorola/scorpion_mini
+
 ## (2) Also get non-open-source specific aspects if available
 $(call inherit-product-if-exists, vendor/motorola/scorpion_mini/scorpion_mini-vendor.mk)
 
@@ -9,7 +11,11 @@ PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 # IDC
-PRODUCT_COPY_FILES += device/motorola/scorpion_mini/idc/atmxt-i2c.idc:system/usr/idc/atmxt-i2c.idc
+PRODUCT_COPY_FILES += $(DEVICE_FOLDER)/idc/atmxt-i2c.idc:system/usr/idc/atmxt-i2c.idc
+
+# Audio configuration
+PRODUCT_COPY_FILES += \
+    $(DEVICE_FOLDER)/audio/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x
 
 # copy all kernel modules under the "modules" directory to system/lib/modules
 #PRODUCT_COPY_FILES += $(shell \
