@@ -40,3 +40,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Inherit from msm8960-common
 $(call inherit-product, device/motorola/msm8960-common/msm8960-common.mk)
+# Inherit cdma specific stuff
+$(call inherit-product-if-exists, vendor/motorola/msm8960-common/msm8960-common-vendor.mk)
