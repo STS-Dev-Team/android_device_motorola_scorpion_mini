@@ -17,6 +17,17 @@ PRODUCT_COPY_FILES += $(DEVICE_FOLDER)/idc/atmxt-i2c.idc:system/usr/idc/atmxt-i2
 PRODUCT_COPY_FILES += \
     $(DEVICE_FOLDER)/config/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x
 
+#media
+PRODUCT_COPY_FILES += \
+	$(DEVICE_FOLDER)/config/audio_policy.conf:system/etc/audio_policy.conf \
+	$(DEVICE_FOLDER)/config/media_profiles.xml:system/etc/media_profiles.xml \
+	$(DEVICE_FOLDER)/config/media_codecs.xml:system/etc/media_codecs.xml
+
+#config
+PRODUCT_COPY_FILES += \
+	$(DEVICE_FOLDER)/config/vold.fstab:system/etc/vold.fstab \
+	$(DEVICE_FOLDER)/config/gps.conf:system/etc/gps.conf
+
 # Radio and Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
