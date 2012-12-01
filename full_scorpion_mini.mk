@@ -1,5 +1,5 @@
 PRODUCT_COPY_FILES := \
-    device/motorola/scorpion_mini/apns-conf.xml:system/etc/apns-conf.xml
+    device/motorola/scorpion_mini/config/apns-conf.xml:system/etc/apns-conf.xml
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)

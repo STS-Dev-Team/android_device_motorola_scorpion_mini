@@ -1,0 +1,9 @@
+# Android fstab file.
+# The filesystem that contains the filesystem checker binary (typically /system/bin/e2fsck) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+
+# Naming convention:
+#   fstab.<ro.hardware> for any fstab that is required for encryption
+
+#<src>                                              <mnt_point>     <type>  <mnt_flags and options>                                                <fs_mgr_flags>
+/dev/block/platform/msm_sdcc.1/by-name/userdata     /data           ext4    rw,discard,nosuid,nodev,noatime,nodiratime,noauto_da_alloc,nobarrier   wait,check,encryptable=footer
