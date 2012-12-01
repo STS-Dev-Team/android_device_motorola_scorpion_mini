@@ -15,7 +15,7 @@ PRODUCT_COPY_FILES += $(DEVICE_FOLDER)/idc/atmxt-i2c.idc:system/usr/idc/atmxt-i2
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
-    $(DEVICE_FOLDER)/audio/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x
+    $(DEVICE_FOLDER)/config/snd_soc_msm_2x:system/etc/snd_soc_msm/snd_soc_msm_2x
 
 # Radio and Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
