@@ -45,6 +45,35 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_FOLDER)/safestrap/default.prop:system/etc/rootfs/default.prop \
     $(DEVICE_FOLDER)/safestrap/init:system/etc/rootfs/init
 
+# Init scripts and ramdisk
+PRODUCT_PACKAGES += \
+    fstab.qcom \
+    init.mmi.usb.rc \
+    init.mmi.usb.sh \
+    init.msm.rc \
+    init.qcom.class_core.sh \
+    init.qcom.class_main.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.rc \
+    init.qcom.sh \
+    init.qcom.syspart_fixup.sh \
+    init.qcom.usb.sh \
+    init.target.rc \
+    init.vzw.rc \
+    ueventd.qcom.rc \
+    init.ath3k.bt.sh \
+    init.qcom.bt.sh \
+    init.qcom.coex.sh \
+    init.qcom.efs.sync.sh \
+    init.qcom.fm.sh \
+    init.qcom.mdm_links.sh \
+    init.qcom.modem_links.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.sdio.sh \
+    init.qcom.thermald_conf.sh \
+    init.qcom.wifi.sh \
+    usf_post_boot.sh
+
 # Radio and Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
