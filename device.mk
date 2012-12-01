@@ -4,7 +4,7 @@ DEVICE_FOLDER := device/motorola/scorpion_mini
 $(call inherit-product-if-exists, vendor/motorola/scorpion_mini/scorpion_mini-vendor.mk)
 
 ## overlays
-DEVICE_PACKAGE_OVERLAYS += device/motorola/scorpion_mini/overlay/aosp
+DEVICE_PACKAGE_OVERLAYS += $(DEVICE_FOLDER)/overlay/aosp
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
@@ -20,8 +20,69 @@ PRODUCT_COPY_FILES += \
 # Radio and Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
+	telephony.lteOnCdmaDevice=1 \
+	ro.telephony.default_network=10 \
+	ro.modem.no_wdog_chk=1 \
     ro.cdma.subscribe_on_ruim_ready=true \
+	ro.cdma.home.operator.numeric=310004 \
+	ro.cdma.home.operator.alpha=Verizon \
+	ro.cdma.homesystem=64,65,76,77,78,79,80,81,82,83 \
+	persist.radio.mode_pref_nv10=1 \
+	persist.radio.vrte_logic=2 \
+	persist.radio.0x9e_not_callname=1 \
+	persist.radio.skip_data_check=1 \
+	persist.ril.max.crit.qmi.fails=4 \
+	ro.cdma.data_retry_config=max_retries=infinite,0,0,10000,10000,100000,10000,10000,10000,10000,140000,540000,960000 \
+	ro.gsm.data_retry_config=default_randomization=2000,max_retries=infinite,1000,1000,80000,125000,485000,905000 \
+	ro.gsm.2nd_data_retry_config=max_retries=1,15000 \
+	ro.mot.eri=1 \
+	ro.cdma.nbpcd=1 \
+	ro.cdma.home.operator.isnan=1 \
+	ro.mot.ignore_csim_appid=true \
+	ro.telephony.gsm-routes-us-smsc=1 \
+	ro.cdma.otaspnumschema=SELC,1,80,99 \
+	ro.mot.phonemode.vzw4gphone=1 \
+	ro.com.android.dataroaming=true \
     persist.radio.no_wait_for_card=1
+
+#usb
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.usb.mtp=0x2e50 \
+	ro.usb.mtp_adb=0x2e51 \
+	ro.usb.ptp=0x2e52 \
+	ro.usb.ptp_adb=0x2e53
+
+#graphics
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.sf.lcd_density=240 \
+	debug.sf.no_hw_vsync=1
+
+#gps
+PRODUCT_PROPERTY_OVERRIDES += \
+	persist.mot.gps.locktype=4 \
+	persist.mot.gps.assisted=false \
+	persist.mot.gps.smart_battery=1
+
+#misc
+PRODUCT_PROPERTY_OVERRIDES += \
+	debug.enable.wl_log=1 \
+	persist.fuse_sdcard=true \
+	ro.warmboot.capability=1 \
+	ro.com.google.clientid=android-motorola \
+	ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
+	ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
+	ro.com.google.gmsversion=4.1_r2 \
+	ro.setupwizard.mode=ENABLED \
+	ro.com.google.clientidbase=android-motorola \
+	ro.com.google.clientidbase.ms=android-verizon \
+	ro.com.google.clientidbase.am=android-verizon \
+	ro.com.google.clientidbase.gmm=android-motorola \
+	ro.com.google.clientidbase.yt=android-verizon \
+	persist.sys.qc.sub.rstrtlvl=3 \
+	persist.sys.qc.sub.rdump.max=20 \
+	ro.media.enc.aud.fileformat=qcp \
+	ro.media.enc.aud.codec=qcelp \
+	ro.media.enc.aud.bps=13300
 
 # copy all kernel modules under the "modules" directory to system/lib/modules
 #PRODUCT_COPY_FILES += $(shell \
