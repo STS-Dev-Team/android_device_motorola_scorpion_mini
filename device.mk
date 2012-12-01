@@ -104,6 +104,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.media.enc.aud.codec=qcelp \
 	ro.media.enc.aud.bps=13300
 
+# symlinks
+PRODUCT_PACKAGES += \
+    wiperiface \
+    WCNSS_qcom_wlan_nv.bin
+
+# wifi
+PRODUCT_COPY_FILES += \
+    $(DEVICE_FOLDER)/wififirmware/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
+    $(DEVICE_FOLDER)/wififirmware/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
+    $(DEVICE_FOLDER)/wififirmware/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
+    $(DEVICE_FOLDER)/wififirmware/WCNSS_qcom_wlan_nv_regulatory.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv_regulatory.bin
+
 # copy all kernel modules under the "modules" directory to system/lib/modules
 #PRODUCT_COPY_FILES += $(shell \
 #    find device/motorola/scorpion_mini/kernel/modules -name '*.ko' \
