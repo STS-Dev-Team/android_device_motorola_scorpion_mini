@@ -78,12 +78,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # copy all kernel modules under the "modules" directory to system/lib/modules
 #PRODUCT_COPY_FILES += $(shell \
-#    find device/motorola/scorpion_mini/modules -name '*.ko' \
+#    find device/motorola/scorpion_mini/kernel/modules -name '*.ko' \
 #    | sed -r 's/^\/?(.*\/)([^/ ]+)$$/\1\2:system\/lib\/modules\/\2/' \
 #    | tr '\n' ' ')
 
 #ifeq ($(TARGET_PREBUILT_KERNEL),)
-#LOCAL_KERNEL := device/motorola/scorpion_mini/kernel
+#LOCAL_KERNEL := device/motorola/scorpion_mini/kernel/zImage
 #else
 #LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 #endif
