@@ -30,6 +30,21 @@ PRODUCT_COPY_FILES += \
 	$(DEVICE_FOLDER)/config/vold.fstab:system/etc/vold.fstab \
 	$(DEVICE_FOLDER)/config/gps.conf:system/etc/gps.conf
 
+# init*rc
+PRODUCT_COPY_FILES += \
+    $(DEVICE_FOLDER)/rootdir/init.rc:root/init.rc \
+    $(DEVICE_FOLDER)/rootdir/ueventd.rc:root/ueventd.rc
+
+# SafeStrap files
+PRODUCT_COPY_FILES += \
+    $(DEVICE_FOLDER)/rootdir/init.rc:system/etc/rootfs/init.rc \
+    $(DEVICE_FOLDER)/rootdir/init.qcom.rc:system/etc/rootfs/init.qcom.rc \
+    $(DEVICE_FOLDER)/rootdir/init.target.rc:system/etc/rootfs/init.target.rc \
+    $(DEVICE_FOLDER)/rootdir/ueventd.rc:system/etc/rootfs/ueventd.rc \
+    $(DEVICE_FOLDER)/safestrap/adbd:system/etc/rootfs/sbin/adbd \
+    $(DEVICE_FOLDER)/safestrap/default.prop:system/etc/rootfs/default.prop \
+    $(DEVICE_FOLDER)/safestrap/init:system/etc/rootfs/init
+
 # Radio and Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
