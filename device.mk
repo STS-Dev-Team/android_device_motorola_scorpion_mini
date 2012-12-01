@@ -57,20 +57,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.sf.lcd_density=240 \
 	debug.sf.no_hw_vsync=1
 
-#gps
-PRODUCT_PROPERTY_OVERRIDES += \
-	persist.mot.gps.locktype=4 \
-	persist.mot.gps.assisted=false \
-	persist.mot.gps.smart_battery=1
-
 #misc
 PRODUCT_PROPERTY_OVERRIDES += \
 	debug.enable.wl_log=1 \
 	persist.fuse_sdcard=true \
 	ro.warmboot.capability=1 \
 	ro.com.google.clientid=android-motorola \
-	ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
-	ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
 	ro.com.google.gmsversion=4.1_r2 \
 	ro.setupwizard.mode=ENABLED \
 	ro.com.google.clientidbase=android-motorola \
