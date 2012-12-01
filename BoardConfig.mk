@@ -9,8 +9,8 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 4294967296
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/motorola/scorpion_mini/bluetooth
 
-# Kernel
-#TARGET_PREBUILT_KERNEL := device/motorola/scorpion_mini/kernel
+# Inline kernel building
+TARGET_KERNEL_SOURCE := kernel/motorola/msm8960-common
 
 #Twrp
 DEVICE_RESOLUTION := 540x960
