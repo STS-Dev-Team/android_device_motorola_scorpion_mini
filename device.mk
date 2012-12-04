@@ -13,6 +13,10 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 # IDC
 PRODUCT_COPY_FILES += $(DEVICE_FOLDER)/idc/atmxt-i2c.idc:system/usr/idc/atmxt-i2c.idc
 
+# Media config
+PRODUCT_COPY_FILES += \
+    $(DEVICE_FOLDER)/media_profiles.xml:system/etc/media_profiles.xml
+
 # Radio and Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
