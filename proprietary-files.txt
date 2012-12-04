@@ -18,7 +18,6 @@ bin/ftmipcd
 bin/hci_qcomm_init
 bin/location-mq
 bin/mm-pp-daemon
-bin/mm-qcamera-daemon
 bin/mount_ext4.sh
 bin/mountpds
 bin/mpdecision
@@ -44,7 +43,6 @@ bin/tcmdhelp
 bin/thermald
 bin/time_daemon
 bin/timedexec
-bin/v4l2-qcamera-app
 bin/wdsdaemon
 bin/whisperd
 bin/wiperiface_v02
@@ -52,7 +50,6 @@ bin/xtwifi-client
 bin/xtwifi-inet-agent
 
 # HAL
-lib/hw/camera.msm8960.so
 lib/hw/gps.default.so
 lib/hw/nfc.MSM8960.so
 lib/hw/sensorhub.msm8960.so
@@ -82,27 +79,6 @@ lib/libbabysit.so
 lib/libbson.so
 lib/libbt-aptx-4.0.4.so
 lib/libcaps.so
-lib/libchromatix_imx074_default_video.so
-lib/libchromatix_imx074_preview.so
-lib/libchromatix_imx074_video_hd.so
-lib/libchromatix_imx074_zsl.so
-lib/libchromatix_imx091_default_video.so
-lib/libchromatix_imx091_preview.so
-lib/libchromatix_imx091_video_hd.so
-lib/libchromatix_ov2720_default_video.so
-lib/libchromatix_ov2720_preview.so
-lib/libchromatix_ov8820_default_video.so
-lib/libchromatix_ov8820_hfr_60fps.so
-lib/libchromatix_ov8820_preview.so
-lib/libchromatix_ov8820_video_hd.so
-lib/libchromatix_ov8820_zsl.so
-lib/libchromatix_s5k3l1yx_default_video.so
-lib/libchromatix_s5k3l1yx_hfr_120fps.so
-lib/libchromatix_s5k3l1yx_hfr_60fps.so
-lib/libchromatix_s5k3l1yx_hfr_90fps.so
-lib/libchromatix_s5k3l1yx_preview.so
-lib/libchromatix_s5k3l1yx_video_hd.so
-lib/libchromatix_s5k3l1yx_zsl.so
 lib/libcneapiclient.so
 lib/libcnefeatureconfig.so
 lib/libcneqmiutils.so
@@ -135,9 +111,6 @@ lib/libmm-abl-oem.so
 lib/libmm-abl.so
 lib/libmm-audio-resampler.so
 lib/libmm-color-convertor.so
-lib/libmmcamera_faceproc.so
-lib/libmmcamera_frameproc.so
-lib/libmmcamera_statsproc30.so
 lib/libmmjpeg.so
 lib/libmmmpod.so
 lib/libmmosal.so
@@ -158,7 +131,6 @@ lib/libnativedrm1.so
 lib/libnbgm_8.0.1.so
 lib/libnetmgr.so
 lib/libnfcpn544c3_fw.so
-lib/liboemcamera.so
 lib/libopenssl-smime.so
 lib/libpanorama.so
 lib/libpanorama_jni.so
@@ -186,7 +158,6 @@ lib/libsensor1.so
 lib/libsensor_reg.so
 lib/libsensorhub_jni.so
 lib/libsurround_proc.so
-lib/libtcmdcameraservice.so
 lib/libtexture_mem.so
 lib/libtpa.so
 lib/libtpa_core.so
@@ -211,6 +182,22 @@ lib/libxtwifi_ulp_adaptor.so
 lib/pp_proc_plugin.so
 lib/qnet-plugin.so
 lib/tcp-connections.so
+
+# camera needs to be from ics blobs
+lib/hw/camera.msm8960.so
+bin/mm-qcamera-daemon
+lib/libchromatix_ov8820_default_video.so
+lib/libchromatix_ov8820_hfr_60fps.so
+lib/libchromatix_ov8820_preview.so
+lib/libchromatix_ov8820_video_hd.so
+lib/libchromatix_ov8820_zsl.so
+lib/libchromatix_s5k4e1_default_video.so
+lib/libchromatix_s5k4e1_preview.so
+lib/libmmcamera_faceproc.so
+lib/libmmcamera_frameproc.so
+lib/libmmcamera_statsproc30.so
+lib/liboemcamera.so
+lib/libtcmdcameraservice.so
 
 # configs
 etc/ecryptfs.tab
