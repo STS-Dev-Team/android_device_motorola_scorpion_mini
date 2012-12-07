@@ -44,3 +44,4 @@ $(call inherit-product, device/motorola/msm8960-common/msm8960-common.mk)
 $(call inherit-product-if-exists, vendor/motorola/msm8960-common/msm8960-common-vendor.mk)
 # ICS camera blobs
 $(call inherit-product-if-exists, vendor/motorola/scorpion_mini/scorpion_mini_ics_camera.mk)
+$(call inherit-product-if-exists, vendor/motorola/scorpion_mini/scorpion_mini_gps.mk)
