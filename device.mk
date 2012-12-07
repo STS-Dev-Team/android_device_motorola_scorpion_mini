@@ -17,6 +17,12 @@ PRODUCT_COPY_FILES += $(DEVICE_FOLDER)/idc/atmxt-i2c.idc:system/usr/idc/atmxt-i2
 PRODUCT_COPY_FILES += \
     $(DEVICE_FOLDER)/media_profiles.xml:system/etc/media_profiles.xml
 
+# CM-specific init file for SafeStrap
+ifeq ($(TARGET_PRODUCT),cm_scorpion_mini)
+PRODUCT_COPY_FILES += \
+    vendor/cm/prebuilt/common/etc/init.local.rc:system/etc/rootfs/init.cm.rc
+endif
+
 # Radio and Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
