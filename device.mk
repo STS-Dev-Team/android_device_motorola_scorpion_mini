@@ -17,6 +17,10 @@ PRODUCT_COPY_FILES += $(DEVICE_FOLDER)/idc/atmxt-i2c.idc:system/usr/idc/atmxt-i2
 PRODUCT_COPY_FILES += \
     $(DEVICE_FOLDER)/media_profiles.xml:system/etc/media_profiles.xml
 
+# Camera
+PRODUCT_PACKAGES += \
+	camera.scorpion_mini
+
 # Radio and Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
@@ -43,5 +47,5 @@ $(call inherit-product, device/motorola/msm8960-common/msm8960-common.mk)
 # Inherit cdma specific stuff
 $(call inherit-product-if-exists, vendor/motorola/msm8960-common/msm8960-common-vendor.mk)
 # ICS camera blobs
-$(call inherit-product-if-exists, vendor/motorola/scorpion_mini/scorpion_mini_ics_camera.mk)
+$(call inherit-product-if-exists, vendor/motorola/scorpion_mini/scorpion_mini_jb_camera.mk)
 $(call inherit-product-if-exists, vendor/motorola/scorpion_mini/scorpion_42_gps.mk)
