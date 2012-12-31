@@ -24,6 +24,7 @@ PRODUCT_PACKAGES += \
 # Radio and Telephony
 PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
+    ro.config.svlte1x=true \
     ro.cdma.subscribe_on_ruim_ready=true \
     persist.radio.no_wait_for_card=1
 
